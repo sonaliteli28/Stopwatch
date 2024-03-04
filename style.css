@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #222242;
+    
+}
+.container{
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+}
+.circle{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+h1{
+    color: #f9028e;
+    font-size: 50px;
+}
+.circle p{
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    z-index: 9999;
+    font-size: 48px;
+    margin-bottom: 120px;
+}
+.circle p::before{
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: #151538;
+    z-index: -1;
+    border-radius: 50%;
+	left: -10%;
+    top: -118%;
+    animation-name: shine;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes shine{
+    0%,100%{
+        box-shadow: 0px 0px 32px -12px rgba(255, 0, 89, 0.5);
+    }
+    50%{
+        box-shadow: 0px 0px 32px 3px rgba(255, 0, 89, 0.5);
+    }
+}
+button{
+    background-color: transparent;
+    padding: 10px 38px;
+    border: 1px solid #A9A9A9;
+    border-radius: 28px;
+    color: #fff;
+    transition: all .2s ease;
+    font-size: 20px;
+}
+button:not(:last-child){
+    margin-right: 20px;
+}
+button:hover,
+button:focus
+{
+    border-color: #f90269;
+    color: #f90269;
+    box-shadow: 0px 4px 27px -12px #f90269;
+}
